@@ -15,6 +15,7 @@ enum DirectionCircle {
     case right
     case left
     
+    /*
     func moveCircle(direction: DirectionCircle) {
         switch direction {
         case .up:
@@ -29,5 +30,6 @@ enum DirectionCircle {
             print("kek")
         }
     }
+ */
     
 }

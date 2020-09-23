@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         textInCircle = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         textInCircle.center.x = circleFromCode.frame.width / 2
         textInCircle.center.y = circleFromCode.frame.height / 2
-        textInCircle.text = "CENTER"
+        //textInCircle.text = "CENTER"
         textInCircle.textColor = .black
         textInCircle.textAlignment = .center
         circleFromCode.addSubview(textInCircle)
@@ -39,23 +39,38 @@ class ViewController: UIViewController {
     }
     
     @IBAction func upButtonPressed(_ sender: Any) {
-        moveCircleUp() //func from ViewCOntroller
-        directionCircle.moveCircle(direction: .up) //func from DirectionCircle –– enum
+        //moveCircleUp()
+        moveCircle(direction: .up)
     }
     
     @IBAction func downButtonPressed(_ sender: Any) {
-        moveCircleDown()
-        directionCircle.moveCircle(direction: .down)
+        //moveCircleDown()
+        moveCircle(direction: .down)
     }
     
     @IBAction func rightButtonPressed(_ sender: Any) {
-        moveCircleRight()
-        directionCircle.moveCircle(direction: .right)
+        //moveCircleRight()
+        moveCircle(direction: .right)
     }
     
     @IBAction func leftButtonPressed(_ sender: Any) {
-        moveCircleLeft()
-        directionCircle.moveCircle(direction: .left)
+        //moveCircleLeft()
+        moveCircle(direction: .left)
+    }
+    
+    func moveCircle(direction: DirectionCircle) {
+        switch direction {
+        case .up:
+            moveCircleUp()
+        case .down:
+            moveCircleDown()
+        case .right:
+            moveCircleRight()
+        case .left:
+            moveCircleLeft()
+        default:
+            print("kek")
+        }
     }
     
     func moveCircleUp() {
