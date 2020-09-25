@@ -15,7 +15,11 @@ class ViewController: UIViewController {
     
     var circleFromCode: UIView!
     var textInCircle: UILabel!
+    
     let directionCircle: DirectionCircle = .center
+    let step: CGFloat = 5.0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +35,6 @@ class ViewController: UIViewController {
         textInCircle = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         textInCircle.center.x = circleFromCode.frame.width / 2
         textInCircle.center.y = circleFromCode.frame.height / 2
-        //textInCircle.text = "CENTER"
         textInCircle.textColor = .black
         textInCircle.textAlignment = .center
         circleFromCode.addSubview(textInCircle)
@@ -39,74 +42,53 @@ class ViewController: UIViewController {
     }
     
     @IBAction func upButtonPressed(_ sender: Any) {
-        //moveCircleUp()
-        moveCircle(direction: .up)
+        moveCircle(directionCircle: .up, step: step)
     }
     
     @IBAction func downButtonPressed(_ sender: Any) {
-        //moveCircleDown()
-        moveCircle(direction: .down)
+        moveCircle(directionCircle: .down, step: step)
     }
     
     @IBAction func rightButtonPressed(_ sender: Any) {
-        //moveCircleRight()
-        moveCircle(direction: .right)
+        moveCircle(directionCircle: .right, step: step)
     }
     
     @IBAction func leftButtonPressed(_ sender: Any) {
-        //moveCircleLeft()
-        moveCircle(direction: .left)
+        moveCircle(directionCircle: .left, step: step)
     }
     
-    func moveCircle(direction: DirectionCircle) {
-        switch direction {
+    func moveCircle(directionCircle: DirectionCircle, step: CGFloat) {
+        switch directionCircle {
         case .up:
-            moveCircleUp()
+            if circleFromCode.frame.origin.y - step >= 0 {
+                circleFromCode.frame.origin.y -= step
+                textInCircle.text = "UP"
+            } else {
+                textInCircle.text = "Error"
+            }
         case .down:
-            moveCircleDown()
+            if circleFromCode.frame.origin.y + circleFromCode.frame.height + step <= fieldForCircleView.frame.height {
+                circleFromCode.frame.origin.y += step
+                textInCircle.text = "DOWN"
+            } else {
+                textInCircle.text = "Error"
+            }
         case .right:
-            moveCircleRight()
+            if circleFromCode.frame.origin.x + circleFromCode.frame.width + step <= fieldForCircleView.frame.width {
+                circleFromCode.frame.origin.x += step
+                textInCircle.text = "RIGHT"
+            } else {
+                textInCircle.text = "Error"
+            }
         case .left:
-            moveCircleLeft()
+            if circleFromCode.frame.origin.x - step >= 0 {
+                circleFromCode.frame.origin.x -= step
+                textInCircle.text = "LEFT"
+            } else {
+                textInCircle.text = "Error"
+            }
         default:
-            print("kek")
+            print("Error")
         }
     }
-    
-    func moveCircleUp() {
-        if circleFromCode.frame.origin.y - 5 >= 0 {
-            circleFromCode.frame.origin.y -= 5
-            textInCircle.text = "UP"
-        } else {
-            textInCircle.text = "Error"
-        }
-    }
-    
-    func moveCircleDown() {
-        if circleFromCode.frame.origin.y + circleFromCode.frame.height + 5 <= fieldForCircleView.frame.height {
-            circleFromCode.frame.origin.y += 5
-            textInCircle.text = "DOWN"
-        } else {
-            textInCircle.text = "Error"
-        }
-    }
-    
-    func moveCircleRight() {
-        if circleFromCode.frame.origin.x + circleFromCode.frame.width + 5 <= fieldForCircleView.frame.width {
-            circleFromCode.frame.origin.x += 5
-            textInCircle.text = "RIGHT"
-        } else {
-            textInCircle.text = "Error"
-        }
-    }
-    
-    func moveCircleLeft() {
-        if circleFromCode.frame.origin.x - 5 >= 0 {
-            circleFromCode.frame.origin.x -= 5
-            textInCircle.text = "LEFT"
-        } else {
-            textInCircle.text = "Error"
-        }
-    }
-    
 }

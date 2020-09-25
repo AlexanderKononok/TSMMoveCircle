@@ -13,7 +13,7 @@
 		C71C6C5C2512755300276B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71C6C5A2512755300276B04 /* Main.storyboard */; };
 		C71C6C5E2512755500276B04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C71C6C5D2512755500276B04 /* Assets.xcassets */; };
 		C71C6C612512755500276B04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71C6C5F2512755500276B04 /* LaunchScreen.storyboard */; };
-		C73A4BF7251BCED400C9A6E5 /* DirectionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73A4BF6251BCED400C9A6E5 /* DirectionCircle.swift */; };
+		C7FC17C1251CFD1700129F14 /* DirectionCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC17C0251CFD1700129F14 /* DirectionCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		C71C6C5D2512755500276B04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C71C6C602512755500276B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C71C6C622512755500276B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C73A4BF6251BCED400C9A6E5 /* DirectionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionCircle.swift; sourceTree = "<group>"; };
+		C7FC17C0251CFD1700129F14 /* DirectionCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 				C71C6C542512755300276B04 /* AppDelegate.swift */,
 				C71C6C562512755300276B04 /* SceneDelegate.swift */,
 				C71C6C582512755300276B04 /* ViewController.swift */,
-				C73A4BF6251BCED400C9A6E5 /* DirectionCircle.swift */,
+				C7FC17C0251CFD1700129F14 /* DirectionCircle.swift */,
 				C71C6C5A2512755300276B04 /* Main.storyboard */,
 				C71C6C5D2512755500276B04 /* Assets.xcassets */,
 				C71C6C5F2512755500276B04 /* LaunchScreen.storyboard */,
@@ -144,7 +144,7 @@
 				C71C6C592512755300276B04 /* ViewController.swift in Sources */,
 				C71C6C552512755300276B04 /* AppDelegate.swift in Sources */,
 				C71C6C572512755300276B04 /* SceneDelegate.swift in Sources */,
-				C73A4BF7251BCED400C9A6E5 /* DirectionCircle.swift in Sources */,
+				C7FC17C1251CFD1700129F14 /* DirectionCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
