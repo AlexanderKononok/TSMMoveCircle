@@ -9,9 +9,9 @@
 import Foundation
 
 enum DirectionCircle {
-    case center
-    case up
-    case down
-    case right
-    case left
+  case center
+  case up
+  case down
+  case right
+  case left
 }
